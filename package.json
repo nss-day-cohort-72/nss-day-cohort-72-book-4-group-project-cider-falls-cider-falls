@@ -1,0 +1,13 @@
+{
+  "name": "book-4-group-project-cider-falls-origin-mayne",
+  "version": "1.0.0",
+  "description": "This project has your team building an application for the Cider Falls National Park that will track park area, park activities, and park guests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
