@@ -31,13 +31,21 @@ A html module
 A styles directory to contain details and main.css
 
 src
+
 main.js to invoke functions
+
 database.js to contain the arrays of areas, guests, and services
+
 areas.js to convert to html and event listener for number of guests
+
 services.js to convert to html and event listener for areas
+
 assignments.js to assign guests to areas and services to areas
+
 guests.js to convert to html
 
 styles
+
 details.css
+
 main.css
