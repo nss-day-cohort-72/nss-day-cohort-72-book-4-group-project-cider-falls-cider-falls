@@ -1,0 +1,44 @@
+INSTRUCTIONS
+
+6 Major destinations in park
+
+-Northeast section has Chamfort River that supports rafting, canoeing, 
+and fishing
+-Northern section has Lost Wolf Hiking Trail that supports hiking,
+picnicking & rock climbing
+
+Northwest section has Lodge, hotel, & a restuaraunt this area supports
+lodging, parking, information, and picnicking 
+
+Southwest section has Gander River only supports fishing and hiking
+
+Southern section has Campgrounds, office park, children play areas
+this are supports information,lodging, and parking
+
+Southeast section has Pine Bluffs Trails, network of trails 
+for all levels of hikers. Beginner trail has food vendors
+this area supports hiking, picnicking and zip lines.
+
+Each section has a title and should display the services it supports
+
+MODULES
+
+Database.js
+-Houses data about guests, areas, services
+- Exports copies of arrays using functions
+
+
+Areas.js
+-Imports areas copy and guests copy and store in variable
+- Build functon to return HTML for areas using for loop
+-Event listeners
+
+Services.js
+-Build function to return HTML for services using for loop
+
+Guests.js
+-Build function to return HTML for guests using for loop
+
+Main.js 
+-import functions from areas,services,guests modules
+- Display information to DOM
