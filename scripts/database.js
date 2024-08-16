@@ -101,20 +101,18 @@ const database = {
 };
 
 export const getGuests = () => {
-  return database.guests.map((guest) => ({ ...guest }));
-};
+    return database.guests.map(guest => ({...guest}))
+  }
 
-export const getAreas = () => {
-  return database.areas.map((area) => ({ ...area }));
-};
+  export const getAreas = () => {
+    return database.areas.map(area => ({...area}))
+  }
 
 export const getServices = () => {
-  return database.services.map((service) => ({ ...service }));
-};
+    return database.services.map(service => ({...service}))
+  }
 
 export const getParkAreaServices = () => {
-  return database.ParkAreaServices.map((areaService) => ({ ...areaService }));
-};
-
-
-
+    return database.ParkAreaServices.map(areaService => ({...areaService}))
+  }
+    
