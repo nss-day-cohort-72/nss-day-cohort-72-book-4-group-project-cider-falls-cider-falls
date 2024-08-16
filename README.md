@@ -47,5 +47,4 @@ guests.js to convert to html
 styles
 
 details.css
-
 main.css
