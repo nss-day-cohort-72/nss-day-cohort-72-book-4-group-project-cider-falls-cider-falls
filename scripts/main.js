@@ -2,12 +2,12 @@ import { Guests } from "./guests.js";
 import { Areas } from "./areas.js";
 import { Services } from "./services.js";
 
-console.log("main.js loaded");
+// console.log("main.js loaded");
 
 // Select the main container where content will be dynamically inserted
 const mainContainer = document.getElementById("container");
 
-console.log(mainContainer);
+// console.log(mainContainer);
 
 // Generate the HTML content for the services, areas, and guest list sections
 const applicationHTML = `
@@ -25,7 +25,7 @@ const applicationHTML = `
 </div>
 `;
 
-console.log("applicationHTML:", applicationHTML);
+// console.log("applicationHTML:", applicationHTML);
 
 // Inject the generated HTML into the main container
 // Inject the generated HTML into the main container

@@ -1,6 +1,6 @@
 const database = {
   guests: [
-    { id: 1, name: 'John Smith', areaId: 3 },
+    { id: 1, name: 'John Smith', areaId: 1 },
     { id: 2, name: 'Emma Johnson', areaId: 5 },
     { id: 3, name: 'Michael Davis', areaId: 2 },
     { id: 4, name: 'Samantha Lee', areaId: 7 },
@@ -15,7 +15,7 @@ const database = {
     { id: 13, name: 'Emily Jackson', areaId: 14 },
     { id: 14, name: 'Ethan Thompson', areaId: 12 },
     { id: 15, name: 'Madison Garcia', areaId: 15 },
-    { id: 16, name: 'Nicholas Hill', areaId: 2 },
+    { id: 16, name: 'Nicholas Hill', areaId: 1 },
     { id: 17, name: 'Chloe Flores', areaId: 3 },
     { id: 18, name: 'David Green', areaId: 6 },
     { id: 19, name: 'Mia Collins', areaId: 4 },

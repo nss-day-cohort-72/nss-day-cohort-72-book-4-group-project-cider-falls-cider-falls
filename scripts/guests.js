@@ -1,12 +1,18 @@
-import { getGuests} from "./database.js"
+import { getGuests } from './database.js';
 
-const guests = getGuests()
+const guests = getGuests();
 
 export const Guests = () => {
-    return `
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
+  let html = `
+    <ul class = "guest-container">`;
+  for (const guest of guests) {
+    html += `
+        <li>${guest.name}</li>
     `;
+  }
+  html += `
+  </ul>
+ `;
+  return html;
 };
+
