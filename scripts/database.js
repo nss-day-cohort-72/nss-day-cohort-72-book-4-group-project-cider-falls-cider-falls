@@ -104,18 +104,18 @@ const database = {
     };
 
 export const getGuests = () => {
-    return database.walkers.map(guest => ({...guest}))
+    return database.guests.map(guest => ({...guest}))
   }
 
   export const getAreas = () => {
-    return database.walkers.map(area => ({...area}))
+    return database.areas.map(area => ({...area}))
   }
 
 export const getServices = () => {
-    return database.walkers.map(service => ({...service}))
+    return database.services.map(service => ({...service}))
   }
 
 export const getParkAreaServices = () => {
-    return database.walkers.map(areaService => ({...areaService}))
+    return database.ParkAreaServices.map(areaService => ({...areaService}))
   }
     
