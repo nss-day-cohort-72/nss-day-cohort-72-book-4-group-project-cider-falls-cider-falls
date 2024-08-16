@@ -1,0 +1,60 @@
+This project is more complex than either DeShawn's Dog Walking or Brewed Awakenings, and you are not provided with any initial, boilerplate code.
+
+It is crucial, therefore, that you work on designing the algorithm before you write any code.
+
+What are the main resources (i.e. tables)? Design your ERD first.
+Guests, Services, Park Areas, parkAreaServices
+
+What are the properties of each resource?
+Guests: id, name, parkAreas_id
+Services: id, name, destinationId
+Park Areas: id, title, serviceId
+parkAreaServices: id, destinationId, serviceId
+
+
+What is the relationship between the resources? If it's many-to-many, what additional data must you design in your ERD?
+See diagram
+
+
+Which modules should you create?
+Guests
+Services
+Park Areas
+Database
+Main
+
+What is the responsibility of each module?
+Guests - event listener, HTML string
+Services - event listener, HTML string
+Park Areas - event listener, HTML string
+Database - tables, table copy functions
+Main - invoke all HTML functions
+
+
+What functions should be in which modules?
+Guests - HTML string generation (guests)
+Services - event listener (addEventListener), HTML string generation (service), serviceInArea
+Park Areas - event listener (addEventListener), HTML string generation (area), guestsInArea
+Database - getGuests, getServices, getParkAreas
+Main - invoke from other modules, render to DOM
+
+What is the responsibility of each function?
+Guests - HTML string generation (guests)
+Services - event listener (addEventListener), HTML string generation (allService), HTML string generation (service)
+Park Areas - event listener (addEventListener), HTML string generation (area), guestsInArea
+Database - getGuests, getServices, getParkAreas
+Main - invoke from other modules, render to DOM
+
+What should each function return?
+Guests - guests will return an HTML string of guests
+Services - addEventListener will return a window alert. allService will return an HTML string of all the services in the park. service will return an HTML string of areas providing the clicked service
+Park Areas - addEventListener will return a window alert. area will return an HTML string of areas in the park. guestsInArea will return the number of guests in an area.
+
+
+What is the spcific algorithm for each function? Does the function need parameters? Should it return something?
+
+
+
+
+
+Do all of this before you write a single line of code, or you could end up wasting hours of time writing code only to find that you need to throw it all away because you didn't design the algorithm first.
