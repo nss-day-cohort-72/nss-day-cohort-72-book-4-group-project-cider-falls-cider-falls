@@ -103,6 +103,19 @@ const database = {
       ]
     };
 
-    
-    export default database;
+export const getGuests = () => {
+    return database.walkers.map(guest => ({...guest}))
+  }
+
+  export const getAreas = () => {
+    return database.walkers.map(area => ({...area}))
+}
+
+export const getServices = () => {
+  return database.walkers.map(service => ({...service}))
+}
+
+export const getParkAreaServices = () => {
+  return database.walkers.map(areaService => ({...areaService}))
+}
     
