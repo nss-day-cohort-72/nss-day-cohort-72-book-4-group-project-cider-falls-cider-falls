@@ -156,3 +156,16 @@ const database = {
     }]
 
 }
+
+export const getAreas = () => {
+    return database.celebrities.map(areas => ({...areas}))
+}
+export const getGuests = () => {
+    return database.celebrities.map(guest => ({...guest}))
+}
+export const getServices = () => {
+    return database.celebrities.map(service => ({...service}))
+}
+export const getServicesToArea = () => {
+    return database.celebrities.map(serviceToArea => ({...serviceToArea}))
+}
