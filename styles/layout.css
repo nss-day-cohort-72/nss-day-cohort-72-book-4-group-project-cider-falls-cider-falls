@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(100, 100, 100);
+}
+
+h3 {
+    margin: 10px 0!important;
+}
+img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+main {
+    height: 680px;
+    background-color: aqua;
+}
+
+section:first-child {
+    background-color: green;
+}
+
+section:nth-child(2) {
+    background-color: blue;
+}
+
+.areas {
+    height: 100% !important;
+}
+
+.destination {
+    background-color: white;
+}
+
+.destination-row {
+    height: 45% !important;
+}
