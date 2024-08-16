@@ -109,13 +109,13 @@ export const getGuests = () => {
 
   export const getAreas = () => {
     return database.walkers.map(area => ({...area}))
-}
+  }
 
 export const getServices = () => {
-  return database.walkers.map(service => ({...service}))
-}
+    return database.walkers.map(service => ({...service}))
+  }
 
 export const getParkAreaServices = () => {
-  return database.walkers.map(areaService => ({...areaService}))
-}
+    return database.walkers.map(areaService => ({...areaService}))
+  }
     
