@@ -4,17 +4,22 @@ const areas = getParkAreas()
 const guests = getGuests()
 const services = getServices()
 
+// Event listener for displaying the number of guests
 document.addEventListener(
     "click",
     (clickEvent) => {
-        const areaTarget = clickEvent.target
-        if (areaTarget.classList.contains("parkArea")) {
-            const areaId = parseInt(areaTarget.dataset.id)
+
+        const areaTitleTarget = clickEvent.target.closest(".parkAreaTitle")
+        
+        if (areaTitleTarget) {
+            const areaId = parseInt(areaTitleTarget.dataset.areaId)
+
             const numberOfGuests = guests.filter(guest => guest.parkAreasId === areaId).length
-            window.alert(`There are currently ${numberOfGuests} guests in the ${areaTarget.textContent} area.`)
+            window.alert(`There are currently ${numberOfGuests} guests in the ${areaTitleTarget.textContent} area.`)
         }
     }
 )
+
 
 export const ParkAreasList = () => {
     let areasHTML = "<ul>";
@@ -40,3 +45,4 @@ export const ParkAreasList = () => {
     areasHTML += "</ul>";
     return areasHTML;
 };
+
