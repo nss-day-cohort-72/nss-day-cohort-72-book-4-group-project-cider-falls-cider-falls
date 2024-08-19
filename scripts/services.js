@@ -33,6 +33,9 @@ document.addEventListener(
         }
     }
 );
+
+
+
 export const serviceList = () => {
     let servicesHTML = "<ul>";
 
