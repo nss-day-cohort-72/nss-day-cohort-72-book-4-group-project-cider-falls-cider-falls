@@ -22,14 +22,12 @@ export const ParkAreasList = () => {
     
 
     for (const area of areas) {
-        areasHTML += `<li>
-        <h2 data-id="${area.id}">${area.title}</h2>
-        <p>${area.service_id}</p>
-     </li>`
+        areasHTML += `<li data-id="${area.id}">
+                        ${area.title}</li>`
 }
 
     areasHTML += "</ul>"
 
-    return citiesHTML
+    return areasHTML
 }
 
