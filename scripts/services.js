@@ -7,21 +7,32 @@ document.addEventListener(
     "click",
     (clickEvent) => {
         const itemClicked = clickEvent.target;
+        const serviceId = parseInt(itemClicked.dataset.id); // Convert serviceId to a number
 
         if (itemClicked.dataset.type === 'service') {
-            const serviceId = parseInt(itemClicked.dataset.id);
-            const matchingAreas = parkAreas.filter(area => area.service_id.includes(serviceId));
+            // Collect all matching areas
+            const matchingAreas = [];
 
+            for (const area of parkAreas) {
+                // Split the service_id string into an array of numbers
+                const serviceIdsArray = area.service_id.split(",").map(id => parseInt(id.trim()));
+                
+                // Check if serviceId is in the array
+                if (serviceIdsArray.includes(serviceId)) {
+                    matchingAreas.push(area.title);
+                }
+            }
+
+            // Display all matching areas in one alert
             if (matchingAreas.length > 0) {
-                const areaNames = matchingAreas.map(area => area.title).join(', ');
-                window.alert(`${itemClicked.textContent} is available in the following areas: ${areaNames}.`);
+                const areaList = matchingAreas.join(" and ");
+                window.alert(`${itemClicked.textContent} is available in ${areaList}.`);
             } else {
-                window.alert(`${itemClicked.textContent} is not available in any park area.`);
+                window.alert(`${itemClicked.textContent} is not available in any park areas.`);
             }
         }
     }
 );
-
 export const serviceList = () => {
     let servicesHTML = "<ul>";
 
