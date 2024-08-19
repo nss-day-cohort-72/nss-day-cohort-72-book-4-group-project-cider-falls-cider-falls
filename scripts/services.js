@@ -1,36 +1,36 @@
 import { getServices, getParkAreas } from "./database.js";
 
-const services = getServices()
-const parkAreas = getParkAreas()
+const services = getServices();
+const parkAreas = getParkAreas();
 
 document.addEventListener(
     "click",
     (clickEvent) => {
-        const itemClicked = clickEvent.target
-        const serviceId = itemClicked.dataset.id
+        const itemClicked = clickEvent.target;
 
         if (itemClicked.dataset.type === 'service') {
+            const serviceId = parseInt(itemClicked.dataset.id);
+            const matchingAreas = parkAreas.filter(area => area.service_id.includes(serviceId));
 
-            for (const area of parkAreas) {
-                if ( area.service_id === parseInt(serviceId)) {
-                    window.alert(`${itemClicked.textContent} is available in ${area.title}.`)
-                }
+            if (matchingAreas.length > 0) {
+                const areaNames = matchingAreas.map(area => area.title).join(', ');
+                window.alert(`${itemClicked.textContent} is available in the following areas: ${areaNames}.`);
+            } else {
+                window.alert(`${itemClicked.textContent} is not available in any park area.`);
             }
         }
     }
-)
-
+);
 
 export const serviceList = () => {
-    let servicesHTML = "<ul>"
+    let servicesHTML = "<ul>";
 
     for (const service of services) {
-        servicesHTML += `<li data-type="service" data-servicePrimaryKey="${service.id}" 
-                            data-serviceforeignkey="${service.parkAreasId}">
-                            ${service.name}</li>`
+        servicesHTML += `<li data-type="service" data-id="${service.id}">
+                            ${service.name}</li>`;
     }
 
-    servicesHTML += "</ul>"
+    servicesHTML += "</ul>";
 
     return servicesHTML;
-}
+};
