@@ -4,22 +4,21 @@ const areas = getParkAreas()
 const guests = getGuests()
 const services = getServices()
 
-// Event listener for displaying the number of guests
+
 document.addEventListener(
     "click",
     (clickEvent) => {
+        const itemClicked = clickEvent.target
+        const areaId = parseInt(itemClicked.dataset.id)
+        let numberOfGuests = 0
 
-        const areaTitleTarget = clickEvent.target.closest(".parkAreaTitle")
-        
-        if (areaTitleTarget) {
-            const areaId = parseInt(areaTitleTarget.dataset.areaId)
-
-            const numberOfGuests = guests.filter(guest => guest.parkAreasId === areaId).length
-            window.alert(`There are currently ${numberOfGuests} guests in the ${areaTitleTarget.textContent} area.`)
+        for (const guest of guests) {
+            if (guest.parkAreasId === areaId)
+                numberOfGuests ++
         }
+        window.alert(`Their are ${numberOfGuests} guests in ${itemClicked.textContent}`)
     }
 )
-
 
 export const ParkAreasList = () => {
     let areasHTML = "<ul>";
@@ -34,7 +33,8 @@ export const ParkAreasList = () => {
 
         areasHTML += `
         <article class="area-card">
-            <h2 class="area-name">${area.title}</h2>
+            <h2 class="area-name" data-type="parkAreaTitle" 
+                data-id="${area.id}">${area.title}</h2>
             <ul class="area-info">
                 ${servicesListHTML}
             </ul>
