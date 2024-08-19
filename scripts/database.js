@@ -319,15 +319,19 @@ const database = {
     }]
 }
 
+
+//Monday start by defining and exporting functions that return copies of our arrays of objects.
+
+export const getServices = () => {
+    return database.services.map(service => ({...service}))
+}
+
 export const getGuests = () => {
-    return database.guests.map(guest => ({...guest}) )
+    return database.guests.map(guest => ({...guest}))
 }
 
 export const getParkAreas = () => {
-    return database.parkAreas.map(area => ({...area}))
+    return database.parkAreas.map(parkArea => ({...parkArea}))
 }
 
-export const getServices = () => {
-    return database.services.map(service => ({service}))
-}
 
