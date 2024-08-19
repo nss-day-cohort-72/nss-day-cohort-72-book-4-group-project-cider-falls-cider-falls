@@ -2,28 +2,17 @@ import { serviceList } from "./services.js";
 import { guestList } from "./guests.js";
 import { ParkAreasList } from "./parkAreas.js";
 
-const mainContainer = document.querySelector("#container")
 
-const applicationHTML = `
-    <h1>Cider Falls</h1>
-    <article class="details">
-        <section class="detail--column list details__kids">
-            <h2>Services we offer</h2>
-            ${serviceList()}
-        </section>
-        <section class="detail--column details__celebrities">
-            <h2>Guests</h2>
-            ${guestList()}
-        </section>
-    </article>
+const areaListElement = document.querySelector('.area_container');
+areaListElement.innerHTML = ParkAreasList();
 
-    <article class="assignments">
-        <h2>Park Areas</h2>
-        ${ParkAreasList()}
-    </article>
-`
+const guestListElement = document.querySelector('.guest_list');
+guestListElement.innerHTML = guestList();
 
-mainContainer.innerHTML = applicationHTML
+const serviceListElement = document.querySelector('.service_bar');
+serviceListElement.innerHTML = serviceList();
 
 
-//Edit out this later
+
+
+
