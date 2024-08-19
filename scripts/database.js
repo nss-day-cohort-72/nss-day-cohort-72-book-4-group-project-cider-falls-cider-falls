@@ -318,3 +318,16 @@ const database = {
         parkAreasId: "3, 6"
     }]
 }
+
+export const getGuests = () => {
+    return database.guests.map(guest => ({...guest}) )
+}
+
+export const getParkAreas = () => {
+    return database.parkAreas.map(area => ({...area}))
+}
+
+export const getServices = () => {
+    return database.services.map(service => ({service}))
+}
+
