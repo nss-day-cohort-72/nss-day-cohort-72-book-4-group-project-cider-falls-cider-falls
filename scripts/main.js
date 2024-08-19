@@ -24,3 +24,6 @@ const applicationHTML = `
 `
 
 mainContainer.innerHTML = applicationHTML
+
+
+//Edit out this later
