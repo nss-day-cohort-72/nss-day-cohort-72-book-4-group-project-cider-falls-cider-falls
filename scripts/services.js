@@ -40,7 +40,8 @@ export const serviceList = () => {
     let servicesHTML = "<ul>";
 
     for (const service of services) {
-        servicesHTML += `<li data-type="service" data-id="${service.id}">
+        servicesHTML += `<li data-type="service" data-id="${service.id}"
+                            class="service_list">
                             ${service.name}</li>`;
     }
 

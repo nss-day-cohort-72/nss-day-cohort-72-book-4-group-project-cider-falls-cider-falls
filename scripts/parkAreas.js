@@ -21,7 +21,7 @@ document.addEventListener(
 )
 
 export const ParkAreasList = () => {
-    let areasHTML = "<ul>";
+    let areasHTML = "";
 
     for (const area of areas) {
         const areaServices = services.filter(service => {
@@ -42,7 +42,5 @@ export const ParkAreasList = () => {
         `;
     }
 
-    areasHTML += "</ul>";
     return areasHTML;
 };
-
