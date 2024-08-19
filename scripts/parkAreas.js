@@ -8,12 +8,10 @@ const services = getServices()
 document.addEventListener(
     "click",
     (clickEvent) => {
-
-        const areaTarget = clickEvent.target
-
-        if (areaTarget.classList.contains("parkArea")) {
-            const areaId = parseInt(areaTarget.dataset.id)
-
+        const areaTitleTarget = clickEvent.target.closest(".parkAreaTitle")
+        
+        if (areaTitleTarget) {
+            const areaId = parseInt(areaTitleTarget.dataset.areaId)
             const numberOfGuests = guests.filter(guest => guest.parkAreasId === areaId).length
             window.alert(`There are currently ${numberOfGuests} guests in the ${areaTitleTarget.textContent} area.`)
         }
@@ -28,7 +26,6 @@ const getServiceListHTML = (serviceIds) => {
 
 // Function to create the park areas list with services
 export const ParkAreasList = () => {
-
     let parkAreasHTML = "<ul>"
 
     for (const area of areas) {
@@ -42,5 +39,8 @@ export const ParkAreasList = () => {
                 <ul class="services">${servicesHTML}</ul>
             </li>`
     }
-
+//commenting for new commit and push
     parkAreasHTML += "</ul>"
+
+    return parkAreasHTML
+}
