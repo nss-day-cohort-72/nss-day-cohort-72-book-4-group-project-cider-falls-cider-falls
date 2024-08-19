@@ -1,5 +1,6 @@
 import { serviceList } from "./services.js";
 import { guestList } from "./guests.js";
+import { ParkAreasList } from "./parkAreas.js";
 
 const mainContainer = document.querySelector("#container")
 
@@ -18,7 +19,7 @@ const applicationHTML = `
 
     <article class="assignments">
         <h2>Park Areas</h2>
-        
+        ${ParkAreasList()}
     </article>
 `
 
