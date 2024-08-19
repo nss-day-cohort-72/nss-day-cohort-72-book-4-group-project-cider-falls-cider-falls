@@ -245,33 +245,33 @@ const database = {
 
         id: 1, 
         title: "Chamfort River", 
-        service_id: "7, 8, 2", 
+        service_id: "7,8,2", 
     }, {
         id: 2, 
         title: "Lost Wolf Hiking Trail", 
-        service_id: "1, 3, 6", 
+        service_id: "1,3,6", 
     }, {
         id: 3, 
         title: "Lodge", 
-        service_id: "5, 4, 9, 3, 12", 
+        service_id: "5,4,9,3,12", 
     }, {
         id: 4,
          title: "Gander River", 
-         service_id: "8, 1", 
+         service_id: "8,1", 
     }, {
         id: 5, 
         title: "Campgrounds", 
-        service_id: "9, 5, 4, 11", 
+        service_id: "9,5,4,11", 
     }, {
         id: 6,
         title: "Pine Bluffs Trails", 
-        service_id: "10, 1, 3, 12", 
+        service_id: "10,1,3,12", 
     }],
     
     services: [{
         id: 1,
         name: "Hiking",
-        parkAreasId: "2, 4, 6"
+        parkAreasId: "2,4,6"
     }, {
         id: 2,
         name: "Canoeing",
@@ -279,15 +279,15 @@ const database = {
     }, {
         id: 3,
         name: "Picnicking",
-        parkAreasId: "2, 3, 6"
+        parkAreasId: "2,3,6"
     }, {
         id: 4,
         name: "Parking",
-        parkAreasId: "3, 5"
+        parkAreasId: "3,5"
     }, {
         id: 5,
         name: "Lodging",
-        parkAreasId: "3, 5"
+        parkAreasId: "3,5"
     }, {
         id: 6,
         name: "Wall Climbing",
@@ -299,11 +299,11 @@ const database = {
     }, {
         id: 8,
         name: "Fishing",
-        parkAreasId: "1, 4"
+        parkAreasId: "1,4"
     }, {
         id: 9,
         name: "Information",
-        parkAreasId: "3, 5"
+        parkAreasId: "3,5"
     }, {
         id: 10,
         name: "Zip lines",
@@ -315,7 +315,7 @@ const database = {
     }, {
         id: 12,
         name: "Food Sales",
-        parkAreasId: "3, 6"
+        parkAreasId: "3,6"
     }]
 }
 

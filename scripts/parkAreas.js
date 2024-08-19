@@ -21,12 +21,20 @@ export const ParkAreasList = () => {
     let areasHTML = "<ul>"
     
     for (const area of areas) {
-        areasHTML += `<li class="parkArea" data-id="${area.id}">
-                        ${area.title}</li>`
+        let areasHTML = `
+
+        <article class="area-card">
+            <h2 class="area-name">${area.title}</h2>
+                <ul class="area-info">
+                    <li class="area-services"></li>   
+                </ul>
+        </article>
+        `
+    
+
+        areasHTML += "</ul>"
     }
-
-    areasHTML += "</ul>"
-
+    
     return areasHTML
 }
 
