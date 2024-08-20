@@ -5,20 +5,21 @@ const guests = getGuests()
 const services = getServices()
 
 
-document.addEventListener(
-    "click",
-    (clickEvent) => {
-        const itemClicked = clickEvent.target
-        const areaId = parseInt(itemClicked.dataset.id)
-        let numberOfGuests = 0
+document.addEventListener("click", (clickEvent) => {
+    const itemClicked = clickEvent.target;
+
+    if (itemClicked.dataset.type === "parkAreaTitle") {
+        const areaId = parseInt(itemClicked.dataset.id);
+        let numberOfGuests = 0;
 
         for (const guest of guests) {
-            if (guest.parkAreasId === areaId)
-                numberOfGuests ++
+            if (guest.parkAreasId === areaId) {
+                numberOfGuests++;
+            }
         }
-        window.alert(`Their are ${numberOfGuests} guests in ${itemClicked.textContent}`)
+        window.alert(`There are ${numberOfGuests} guests in the ${itemClicked.textContent} area.`);
     }
-)
+});
 
 export const ParkAreasList = () => {
     let areasHTML = "";
