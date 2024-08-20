@@ -1,0 +1,81 @@
+main {
+    position: relative;
+    padding: 20px;
+    height: 100vh; /* Ensure it takes the full viewport height */
+}
+
+body {
+    background-image: url(https://i.imgur.com/NaSMR7P.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    font-family: "Copperplate", fantasy;
+    font-size: 80px;
+    color: #333;
+}
+
+/* Service Bar Styles */
+.service_bar {
+    text-align: left;
+    width: auto;
+    height: 70px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    position: relative;
+    top: 20px;
+}
+
+.service_list {
+    display: inline;
+    padding: 13px;
+    font-size: 1.5rem;
+}
+
+.area_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 40px; /* Space between items */
+    width:65%;
+    padding: 20px;
+}
+
+.area-card {
+    height: 200px;
+    border-radius: 8px;
+    margin-top: 60px;
+    background-color:#ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.guest_container {
+    position: absolute;
+    right: 20px; /* Distance from the right edge */
+    top: 92px; /* Distance from the top edge */
+    width: 300px; /* Adjust width as needed */
+    height: 490px; /* Adjust height as needed */
+    background-color: #ccc;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+.contact_info {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color:#ccc;
+    border-top: 1px solid #ccc;
+}
+
+.contact_info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
